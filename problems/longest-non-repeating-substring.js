@@ -20,3 +20,9 @@ const longestNonRepeatingSubstring = function (string) {
     let longestWord = longest.sort(function (a, b) { return b.length - a.length; });
     return longestWord[0].length
 };
+
+// What is the time and space complexity of my code?
+
+// Time wise i believe it is O(n) because i do a for loop and a sort outside of one another
+
+// Spave wise i blieve it is O(n) as well as i focus on adding onto an array with n amount substrings to push
