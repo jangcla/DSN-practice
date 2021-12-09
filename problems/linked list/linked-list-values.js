@@ -9,13 +9,13 @@
 //   }
 // }
 
+
 //ATTEMPT 1
 // const linkedListValues = (head) => { 
 //   let current = head;
 //   if (current === null) return [];
 
 //  return [current.val].concat(linkedListValues(current.next));
-
 
 //   const ans = [];
 //   let current = head;
@@ -27,3 +27,13 @@
 
 //   return ans;
 // }
+
+
+//ATTEMP 2
+// const linkedListValues = (head) => { 
+//   let current = head;
+//   if (current === null) return [];
+
+//  return [current.val].concat(linkedListValues(current.next));
+// }
+
