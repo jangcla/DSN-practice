@@ -37,3 +37,17 @@
 //  return [current.val].concat(linkedListValues(current.next));
 // }
 
+//ATTEMP 3
+const linkedListValues = (head) => {
+    const ans = [];
+    let current = head;
+    values(head, ans);
+    return ans;
+}
+
+const values = (head, ans) => {
+    if (head === null) return;
+    ans.push(head.val);
+    values(head.next, ans);
+}
+
