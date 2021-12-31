@@ -46,3 +46,8 @@ var flatten = function (head) {
     }
     return head;
 };
+
+
+// this is time: O(n) as I itterate through the linked list with a while loop once;
+// this is space: O(1) as I simply change the original linked list pointers and simply adding onto the temporary array;
+// just a little proud moment as this code had a better space complexity usage than 100% of leet code submissions
