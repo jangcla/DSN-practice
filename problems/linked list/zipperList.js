@@ -46,3 +46,29 @@
 // this is space: O(n) as we store the values in every recursive stack;
 
 
+// FINAL ATTEMPT W/NOTES
+const zipperLists = (head1, head2) => {
+    let curr = head1; //assigns a pointer to where we are currently
+    let curr1 = head1.next; //so we can store the value of head1.next before it is over written
+    let curr2 = head2; //used to store value of head2.next before over written
+
+    let count = 0; //used to differentiate whether to use the first or second head 
+    //even counts are for head1 while odd counts are for head2
+
+    while (curr1 !== null && curr2 !== null) {
+        if (count % 2 === 0) {
+            curr.next = curr2;
+            curr2 = curr2.next;
+        } else {
+            curr.next = curr1;
+            curr1 = curr1.next;
+        }
+
+        curr = curr.next;
+        count++;
+    }
+    if (curr1 !== null) curr.next = curr1;
+    if (curr2 !== null) curr.next = curr2;
+
+    return head1;
+};
