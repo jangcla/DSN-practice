@@ -37,3 +37,7 @@ const mergeLists = (head1, head2) => {
 
     return head1;
 };
+
+// this is time: O(n) as it only itterates once through the linked list;
+// this is space: O(1) as I'm just keying into the original head node pointer as I itterate through;
+
