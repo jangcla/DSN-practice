@@ -42,3 +42,16 @@ class Node {
 
 //this is both time: O(n) as we itterate until the end of the values array;
 //this is both space: O(n) as at every itteration we make a new Node;
+
+//ATTEMPT 3
+const createLinkedList = (values, i = 0) => {
+    if (i === values.length) return null;
+
+    let head = new Node(values[i]);
+
+    head.next = createLinkedList(values, i + 1);
+    return head;
+};
+
+//this is time: O(n) as we recursion until the end of the values array;
+//this is space: O(n) as we store different values on every call stack;
