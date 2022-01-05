@@ -25,3 +25,20 @@ class Node {
   
 //   return head;
 // };
+
+//ATTEMPT 2
+// const createLinkedList = (values) => {
+//   let tempHead = new Node(null);
+  
+//   let current = tempHead;
+  
+//   for (let val of values) {
+//     current.next = new Node(val);
+//     current = current.next;
+//   }
+  
+//   return tempHead.next;
+// };
+
+//this is both time: O(n) as we itterate until the end of the values array;
+//this is both space: O(n) as at every itteration we make a new Node;
