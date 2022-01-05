@@ -6,3 +6,27 @@
 // You may assume that the input list is non-empty.
 
 // You may assume that the input list contains the target.
+
+//ATTEMPT 1
+// const removeNode = (head, targetVal) => {
+//   // todo
+//   let current  = head;
+//   let prev = null;
+  
+//   while (current.val !== targetVal) {
+//     prev = current;
+    
+//     current = current.next;
+//   }
+  
+//   let next = current.next;
+//   current = prev;
+  
+//   if(current === null) {
+//     return next;
+//   } else {
+//     current.next = next;
+//   }
+
+//   return head;
+// };
