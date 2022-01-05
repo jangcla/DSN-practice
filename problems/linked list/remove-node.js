@@ -30,3 +30,20 @@
 
 //   return head;
 // };
+
+//ATTEMP 2
+const removeNode = (head, targetVal) => {
+    let current = head;
+    let prev = null;
+
+    while (current.val !== targetVal) {
+        prev = current;
+
+        current = current.next;
+    }
+    if (prev === null) return current.next;
+    prev.next = current.next;
+
+    return head;
+};
+
