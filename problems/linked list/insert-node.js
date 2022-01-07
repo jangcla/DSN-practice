@@ -38,3 +38,27 @@ const insertNode = (head, value, index) => {
 
 //this is time: O(n) as I itterate through the linked list until the index is found;
 //this is space: O(1) as I am simply initializing the data at first and simply keying into the linked list;
+
+
+//ATTMEPT 2
+//   const insertNode = (head, value, index) => {
+//     let newNode = new Node(value);
+    
+//     if(index === 0) {
+//       newNode.next = head;
+//       return newNode;
+//     }
+   
+//     if (index === 1) {  
+//       newNode.next = head.next;
+//       head.next = newNode;
+//       return;
+//     }
+    
+//     insertNode(head.next, value, index-1);
+    
+//     return head;
+//   };
+//this is time: O(n) as I recursion through the whole linked list until the index is found;
+//this is space: O(n) as every stack stores a different value;
+
