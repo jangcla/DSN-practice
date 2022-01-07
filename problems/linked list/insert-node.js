@@ -4,3 +4,37 @@
 // Do this in -place.
 
 // You may assume that the input list is non - empty and the index is not greater than the length of the input list.
+
+class Node {
+    constructor(val) {
+        this.val = val;
+        this.next = null;
+    }
+}
+//ATTEMPT 1
+const insertNode = (head, value, index) => {
+    let newNode = new Node(value);
+    let currIndex = 0;
+
+    let current = head;
+
+
+    while (current !== null) {
+        if (currIndex + 1 === index) {
+            newNode.next = current.next;
+            current.next = newNode;
+            return head;
+        };
+
+        if (index === 0) {
+            newNode.next = current;
+            return newNode;
+        };
+
+        currIndex++;
+        current = current.next;
+    };
+};
+
+//this is time: O(n) as I itterate through the linked list until the index is found;
+//this is space: O(1) as I am simply initializing the data at first and simply keying into the linked list;
