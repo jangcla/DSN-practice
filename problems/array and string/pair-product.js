@@ -4,3 +4,22 @@
 // Be sure to return the indices, not the elements themselves.
 
 // There is guaranteed to be one such pair whose product is the target.
+
+const pairProduct = (numbers, targetProduct) => {
+    // todo
+    let hash = {};
+    console.log(numbers)
+    for (let i = 0; i < numbers.length; i++) {
+        let number = (targetProduct / numbers[i]);
+
+        if (number in hash) return [hash[number], i];
+
+        hash[numbers[i]] = i;
+    }
+    //  if (hash[number] === undefined) {
+    //    hash[numbers[i]] = i;
+    //  } else {
+    //    return [hash[number], i]
+    //  }
+    // }
+};
