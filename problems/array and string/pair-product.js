@@ -23,3 +23,6 @@ const pairProduct = (numbers, targetProduct) => {
     //  }
     // }
 };
+
+// this is time: O(n) as we have to itterate once through the numbers array
+// this is space: O(n) as we have to store the values from the array
