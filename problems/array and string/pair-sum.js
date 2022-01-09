@@ -35,3 +35,26 @@
 
 // this is time: O(n + n) => O(n) because the first loop itterates to store the values while the second loops through to the array;
 // this is space: O(n) as we have to store values into the hash which is factored by n amount in the array;
+
+
+//ATTEMPT 2
+const pairSum = (numbers, targetSum) => {
+    // todo
+    let hash = {};
+
+    for (let i = 0; i < numbers.length; i++) {
+        let number = targetSum - numbers[i];
+
+        if (number in hash) return [hash[number], i];
+
+        hash[numbers[i]] = i;
+        // if (hash[number] === undefined) {
+        //   hash[numbers[i]] = i;
+        // } else {
+        //   return [hash[number], i];
+        // }
+    }
+
+};
+// this is time: O(n) as it needs to itterate through the array once to store the needed values
+// this is space: O(n) as we store values from the array(n) into our hash map;
