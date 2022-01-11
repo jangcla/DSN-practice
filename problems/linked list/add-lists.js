@@ -15,3 +15,42 @@
 // --------------
 //     5 -> 7 -> 9
 
+class Node {
+    constructor(val) {
+        this.val = val;
+        this.next = null;
+    }
+}
+
+const addLists = (head1, head2) => {
+    // todo
+    let newList = new Node(null);
+
+    let current = newList;
+    let curr1 = head1;
+    let curr2 = head2;
+
+    while (curr1 !== null) {
+        let nextVal = curr1.val + curr2.val;
+
+        if (nextVal >= 10) {
+            nextVal -= 10;
+            curr1.next.val++;
+        }
+
+        if (curr2 === null) {
+            let nextVal = curr1.val + 0
+        }
+
+        current.next = new Node(nextVal);
+
+        if (curr1.next !== null) curr1 = curr1.next;
+        if (curr2.next !== null) curr2 = curr2.next;
+
+        current = current.next;
+
+    }
+
+    return newList.next;
+};
+
