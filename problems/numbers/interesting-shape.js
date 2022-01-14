@@ -8,3 +8,5 @@ function solution(n) {
     return n * n + (n - 1) * (n - 1);
 }
 
+// this is space: O(1) as we are simply returning the value after muliplying it
+// this is time: O(1) as we are only returning a number after multiplying it
