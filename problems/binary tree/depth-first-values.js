@@ -23,3 +23,6 @@ const depthFirstValues = (root) => {
 
     return values;
 };
+
+//this is time: O(n) as we itterate through the whole tree
+//this is space: O(m) as we add in a new value to the array as we itterate throught the whole tree
