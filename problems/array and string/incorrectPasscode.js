@@ -57,3 +57,7 @@ function solution(passcode, attempts) {
 
     return false; //if it has itterated through the whole attempts array and never reaches the 10 count, then return false meaning it is not yet needed to lock the account
 }
+
+
+//this is space: O(1) as we only key into count variable
+//this is time: O(n) as we itterate through the array which is n
