@@ -33,3 +33,27 @@
 // There are only 9 consecutive incorrect attempts, so there's no need to lock the device.
 
 
+function solution(passcode, attempts) {
+    console.log(passcode)
+    console.log(attempts)
+
+    //create a loop through the attempts
+
+    //if the amount of attempts reach 10 before a correct code is found return true
+    //if the amount of attempts never reach 10 return false
+    //if a correct code is found before 10 attempts are found, reset the attempt counter
+
+    let attemptCount = 0;
+
+
+    for (let i = 0; i < attempts.length; i++) {
+        let code = attempts[i];
+
+        attemptCount++; //counts and increments counter of attempts
+
+        if (code === passcode) attemptCount = 0; //check if the current attempt is the same code
+        if (attemptCount === 10) return true; // if the previous if statement is never snagged and the counter hits 10 attempts immdediately return true meaning we need to lock the account
+    }
+
+    return false; //if it has itterated through the whole attempts array and never reaches the 10 count, then return false meaning it is not yet needed to lock the account
+}
