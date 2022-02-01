@@ -37,3 +37,53 @@
 // "rain.ifmo.ru" - 100 points, 3 Gb of additional space.
 
 // Therefore, "rain.ifmo.ru" must be higher in the standings.
+
+function solution(emails) {
+    //split the emails by '@' to only grab the school they come from then add it into a count then multiply the count by 20 at the end of the itteration
+
+    //depending on the school total who ever has more space wins, while those who have a tie in space must then be ordered in lexicographical order;
+    let school1 = emails[0].split('@')[1];
+
+    for (let i = 0; i < emails.length; i++) {
+
+    }
+
+
+    for (let i = 0; i < emails.length; i++) {
+        let school = emails[i].split('@')[1];
+
+        if (counter[school] === undefined) {
+            counter[school] = [school, 20, 0];
+        } else {
+            counter[school][1] += 20
+        }
+
+
+
+        if (counter[school][1] === 100) {
+            counter[school][2] = 3;
+        }
+        if (counter[school][1] === 200) {
+            counter[school][2] = 8;
+        }
+        if (counter[school][1] === 300) {
+            counter[school][2] = 15;
+        }
+        if (counter[school][1] === 500) {
+            counter[school][2] = 25;
+        }
+    }
+
+    let schools = Object.values(counter);
+
+    let school1 = schools[0];
+    let school2 = schools[1];
+
+
+    if (school1[2] > school2[2]) return [school1[0], school2[0]];
+    if (school1[2] < school2[2]) return [school2[0], school1[0]];
+
+
+    if (school1[0] <= school2[0]) return [school1[0], school2[0]];
+    if (school1[0] >= school2[0]) return [school2[0], school1[0]];
+}
