@@ -42,24 +42,20 @@ function solution(emails) {
     //split the emails by '@' to only grab the school they come from then add it into a count then multiply the count by 20 at the end of the itteration
 
     //depending on the school total who ever has more space wins, while those who have a tie in space must then be ordered in lexicographical order;
-    let school1 = emails[0].split('@')[1];
-
-    for (let i = 0; i < emails.length; i++) {
-
-    }
-
-
+    let counter = {};
+    
+    
     for (let i = 0; i < emails.length; i++) {
         let school = emails[i].split('@')[1];
-
+        
         if (counter[school] === undefined) {
             counter[school] = [school, 20, 0];
         } else {
             counter[school][1] += 20
         }
-
-
-
+        
+        
+        
         if (counter[school][1] === 100) {
             counter[school][2] = 3;
         }
@@ -73,17 +69,20 @@ function solution(emails) {
             counter[school][2] = 25;
         }
     }
-
+    
     let schools = Object.values(counter);
-
+    
     let school1 = schools[0];
     let school2 = schools[1];
-
-
+    
+    
     if (school1[2] > school2[2]) return [school1[0], school2[0]];
     if (school1[2] < school2[2]) return [school2[0], school1[0]];
 
-
+   
     if (school1[0] <= school2[0]) return [school1[0], school2[0]];
-    if (school1[0] >= school2[0]) return [school2[0], school1[0]];
+    if (school1[0] >= school2[0]) return [school2[0], school1[0]];  
 }
+
+//this is space: O(1) as we initialize it once and then only key into it later on
+//this is time: O(n^2) as I have a .split method inside of the for loop
