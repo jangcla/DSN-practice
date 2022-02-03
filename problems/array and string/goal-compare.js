@@ -33,3 +33,6 @@ function compare(teamA, teamB) {
 
     return ans; //should return an array of all the counts comparing team A and team B
 }
+
+//this is space: O(1) as I use pointers and variables to be keyed into
+//this is time: O(n) as I only itterate once through both arrays
