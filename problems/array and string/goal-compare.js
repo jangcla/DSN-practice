@@ -7,5 +7,29 @@
 // thus resulting in the out put[4, 3];
 
 function compare(teamA, teamB) {
-    
+    let ans = [];
+
+    let i = 0;
+    let j = 0;
+
+    let count = 0;
+    while (j < teamB.length) {
+        let aScore = teamA[i];
+        let bScore = teamB[j];
+
+        if(bScore >= aScore) {
+            count++;
+        }
+
+        i++;
+
+        if(i > teamA.length-1) {
+            j++;
+            ans.push(count);
+            count = 0;
+            i = 0;
+        }
+    }
+
+    return ans;
 }
