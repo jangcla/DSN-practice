@@ -20,3 +20,6 @@ function solution(inputArray) {
 
     return least;
 }
+
+// this is space: O(1) as we are simply initializing the value and keying into it and overwritting it
+// this is time: O(n) as we are itterating through the whole loop which is n
