@@ -7,3 +7,16 @@
 
 // 7 and 3 produce the largest product.
 
+function solution(inputArray) {
+    let least = -Infinity;
+
+    for (let i = 0; i < inputArray.length; i++) {
+        let number = inputArray[i];
+        let next = inputArray[i + 1];
+
+        if ((number * next) > least) least = number * next
+
+    }
+
+    return least;
+}
