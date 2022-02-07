@@ -17,3 +17,5 @@ function solution(year) {
     return century;
 }
 
+// this is space: O(1) as we are simply returning the value after dividing it
+// this is time: O(1) as we are only returning a number after dividing it
