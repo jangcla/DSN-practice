@@ -8,4 +8,12 @@
 // For year = 1700, the output should be
 // solution(year) = 17.
 
+function solution(year) {
+    let remainder = (year / 100);
+    let century = (Math.round(year / 100));
+
+    if (remainder > century) return century + 1;
+
+    return century;
+}
 
