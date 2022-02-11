@@ -37,3 +37,6 @@ let jumpingStairs = (jumps) => {
 
     return start;
 }
+
+//this is space: O(1) as a initialize the variable and simply key into it
+//this is time: O(n) as I itterate through the array once with a while loop 
