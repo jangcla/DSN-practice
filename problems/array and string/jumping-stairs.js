@@ -11,3 +11,29 @@
     // 7 - 3 = 4;
     // 4 - 2 = 2;
     // thus 6
+
+
+let jumpingStairs = (jumps) => {
+    let start = 0;
+    let currentStep = start;
+
+    let i = 0;
+    while(i < jumps.length) {
+        let jump = jumps[i];
+
+        currentStep += jump;
+
+        i++;
+        if (currentStep < 1) {
+            let neededSteps = (currentStep * -1);
+            
+            start += neededSteps;
+            currentStep = start;
+
+            i = 0;
+        }
+
+    }
+
+    return start;
+}
