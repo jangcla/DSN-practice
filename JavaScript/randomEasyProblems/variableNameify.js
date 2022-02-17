@@ -16,10 +16,10 @@ variableNameify(['MaX', 'VALUE']) => 'maxValue'
 
 
 function variableNameify(words) {
-    var newStr = words[0].toLowerCase();
+    let newStr = words[0].toLowerCase();
 
-    for (var i = 1; i < words.length; i++) {
-        var word = words[i];
+    for (let i = 1; i < words.length; i++) {
+        let word = words[i];
 
         newStr += captitalizing(word);
     }
@@ -28,8 +28,8 @@ function variableNameify(words) {
 }
 
 function captitalizing(word) {
-    var first = word[0].toUpperCase(); 
-    var restOfWord = word.slice(1).toLowerCase()
+    let first = word[0].toUpperCase(); 
+    let restOfWord = word.slice(1).toLowerCase()
 
     return first + restOfWord;
 }

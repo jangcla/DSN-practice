@@ -13,9 +13,9 @@ multiples(15, 3) => [3, 6, 9, 12]
 // 3. the array is only of multiples of num (conditional to check if multiple of num)
 
 function multiples(max, num) {
-    var multiplesArr = [];
+    let multiplesArr = [];
 
-    for (var number = 1; number < max; number++) {
+    for (let number = 1; number < max; number++) {
         if (number % num === 0) multiplesArr.push(number);
     }
 

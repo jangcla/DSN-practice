@@ -32,15 +32,15 @@ isPassing(assessments2) => false
 
 
 function isPassing(assessments) {
-    var totalScore = 0;
+    let totalScore = 0;
 
-    for (var i = 0; i < assessments.length; i++) {
-        var current = assessments[i];
+    for (let i = 0; i < assessments.length; i++) {
+        let current = assessments[i];
 
         totalScore += current.score;
     }
 
-    var totalAvg = totalScore / assessments.length;
+    let totalAvg = totalScore / assessments.length;
 
     return totalAvg >= 70;
 }

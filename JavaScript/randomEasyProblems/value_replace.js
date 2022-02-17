@@ -17,9 +17,9 @@ valueReplace(['danny', 'kurstie', 'tommy'], { kurstie: 'operations', danny: 'pla
 // 4. return an array full of rewritten values  X
 
 function valueReplace(array, obj) {
-    
-    for (var i = 0; i < array.length; i++) {
-        var key = array[i];
+
+    for (let i = 0; i < array.length; i++) {
+        let key = array[i];
 
         if (key in obj) array[i] = obj[key];
     }
