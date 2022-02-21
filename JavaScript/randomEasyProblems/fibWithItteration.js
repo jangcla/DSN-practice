@@ -21,14 +21,14 @@ fibonacci(10); // => [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ]
 ***********************************************************************/
 
 function fibonacci(n) {
-    var fibNums = [];
+    let fibNums = [];
 
-    for (var i = 0; i < n; i++) {
+    for (let i = 0; i < n; i++) {
         if (i < 2) {
             fibNums.push(1);
         } else {
-            var lastValue = fibNums[fibNums.length - 1];
-            var secondLast = fibNums[fibNums.length - 2];
+            let lastValue = fibNums[fibNums.length - 1];
+            let secondLast = fibNums[fibNums.length - 2];
             fibNums.push(lastValue + secondLast);
         }
     }
