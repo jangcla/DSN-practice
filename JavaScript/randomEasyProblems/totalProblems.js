@@ -39,14 +39,14 @@ totalNumProblems(assessments) => 29
 *******************************************************************************/
 
 function totalNumProblems(assessments) {
-    var totalCount = 0;
+  let totalCount = 0;
 
-    for (var key in assessments) {
-        var current = assessments[key];
-        var problemsArr = current.problems;
+  for (let key in assessments) {
+    let current = assessments[key];
+    let problemsArr = current.problems;
 
-        totalCount += problemsArr.length;
-    }
+    totalCount += problemsArr.length;
+  }
 
-    return totalCount;
+  return totalCount;
 }

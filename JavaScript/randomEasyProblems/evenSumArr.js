@@ -10,10 +10,10 @@ evenSumArray([2, 8, 3, 5]) => [ 2, 20, 2, 6 ]
 *******************************************************************************/
 
 function evenSumArray(array) {
-    var newNums = [];
+    let newNums = [];
 
-    for (var i = 0; i < array.length; i++) {
-        var current = array[i];
+    for (let i = 0; i < array.length; i++) {
+        let current = array[i];
 
         newNums.push(evenAdder(current));
     }
@@ -22,9 +22,9 @@ function evenSumArray(array) {
 }
 
 function evenAdder(num) {
-    var evenNums = 0;
+    let evenNums = 0;
 
-    for (var number = 2; number <= num; number += 2) {
+    for (let number = 2; number <= num; number += 2) {
         evenNums += number;
     }
 
