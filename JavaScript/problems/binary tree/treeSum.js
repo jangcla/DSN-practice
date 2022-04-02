@@ -24,3 +24,12 @@ const treeSumItters = (root) => {
 // Itterative Approach
 // this is time: O(n) as it itterates through the loop n amount of times
 // this is space: O(n) as we are continuosly adding to the stack n amount of times
+
+const treeSumRecurs = (root) => {
+    if (!root) return 0;
+
+    return root.val + treeSumRecurs(root.left) + treeSumRecurs(root.right);
+};
+// Recursive Approach
+// this is time: O(2^n) as we loop through all n amount of tree values and recursively call the left and right values in each recursion;
+// this is space: O(n) as we are continuosly adding to the stack n amount of times
