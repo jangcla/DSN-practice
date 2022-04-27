@@ -7,7 +7,7 @@
 // 2. as we itterate through the stack we just want to store the values
 // 3. after the itteratin we return the values from out stack approach
 
-const depthFirstValues = (root) => {
+const depthFirstValuesItters = (root) => {
   if (root === null) return [];
 
   const depthValues = [];
@@ -29,7 +29,7 @@ const depthFirstValues = (root) => {
 // Space Complexity: O(n) as the stack and depth values increases n amount of times as we itterate through the tree
 // Time Complexity: O(n) we itterate through the tree and that's an n amount of times
 
-const depthFirstValues = (root) => {
+const depthFirstValuesRecurs = (root) => {
     if (root === null) return [];
 
     const leftValues = depthFirstValues(root.left);
