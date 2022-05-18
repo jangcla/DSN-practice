@@ -13,21 +13,25 @@ var isValid = function(s) {
         switch (last) {
             case ')' || "}" || "]":
                 return false;
+                
             case '(':
                 if (current === ')') stack.pop();
             
                 if (current !== ')') stack.push(current);
                 break;
+                
             case '{':
                 if (current === '}') stack.pop();
 
                 if (current !== '}') stack.push(current);  
                 break;
+                
             case '[':
                 if (current === ']') stack.pop();
 
                 if (current !== ']') stack.push(current);
                 break;
+                
             default:
                 stack.push(current);
         };    
