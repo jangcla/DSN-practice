@@ -4,6 +4,40 @@
  */
 var isValid = function(s) {
     if (!s.length) return true;
+    const stack = [];
+    
+    for (let i = 0; i < s.length; i++) {
+        let current = s[i];
+        let last = stack[stack.length - 1];
+        
+        switch (last) {
+            case ')' || "}" || "]":
+                return false;
+            case '(':
+                if (current === ')') stack.pop();
+            
+                if (current !== ')') stack.push(current);
+                break;
+            case '{':
+                if (current === '}') stack.pop();
+
+                if (current !== '}') stack.push(current);  
+                break;
+            case '[':
+                if (current === ']') stack.pop();
+
+                if (current !== ']') stack.push(current);
+                break;
+            default:
+                stack.push(current);
+        };    
+    }
+    
+    return !stack.length;
+};
+//First Attempt
+/* var isValid = function(s) {
+    if (!s.length) return true;
     const stack = [s[0]];
     
     for (let i = 1; i < s.length; i++) {
@@ -32,6 +66,6 @@ var isValid = function(s) {
         // if the current value doesn't close the last then add on top
         
     }
-    
-    return !stack.length
-};
+     return !stack.length
+}
+*/
