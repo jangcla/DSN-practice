@@ -3,7 +3,7 @@
  * @return {number[][]}
  */
 var merge = function(intervals) {
-    const sorted = intervals.sort((a, b) => { return a[0] - b[0]});
+    const sorted = intervals.sort((a, b) => a[0] - b[0]);
     const merged = [ intervals[0] ];
     
     for (let i = 1; i < sorted.length; i++) {
