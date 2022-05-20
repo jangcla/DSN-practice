@@ -7,9 +7,7 @@ var balancedStringSplit = function(s) {
     let balanceCount = 0;
     
     for (let i = 0; i < s.length; i++) {
-        let char = s[i];
-        
-        balanceCheck[char]++;
+        balanceCheck[s[i]]++;
         
         if (balanceCheck["L"] === balanceCheck["R"]) balanceCount++;
     };
