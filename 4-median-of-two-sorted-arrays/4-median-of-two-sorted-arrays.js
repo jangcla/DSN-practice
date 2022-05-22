@@ -23,12 +23,11 @@ var findMedianSortedArrays = function(nums1, nums2) {
     joined.push(...nums1.slice(i));
     joined.push(...nums2.slice(j));
     
-    
     let length = joined.length;
     if (length % 2 === 0) {
         let i = length / 2;
         
-        return (joined[i] + joined[i - 1]) / 2
+        return (joined[i] + joined[i - 1]) / 2;
     }
     
     length = Math.floor(length / 2);
