@@ -18,6 +18,5 @@ var removeElement = function(nums, val) {
     }    
     
     const ind = nums.indexOf(val) === -1 ? nums.length : nums.indexOf(val);
-    
     return ind;
 };
