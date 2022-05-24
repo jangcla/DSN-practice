@@ -11,7 +11,6 @@ var isPalindrome = function(x) {
     
     while (i < j) {
         if (num[i] !== num[j]) return false;
-        
         i++;
         j--;
     }
