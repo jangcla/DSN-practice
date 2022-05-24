@@ -19,8 +19,7 @@ var isPalindrome = function(head) {
     }
        
     let i = 0;
-    let j = values.length - 1;
-    
+    let j = values.length - 1;  
     while (i < j) {
         if (values[i] !== values[j]) return false;
         i++;
