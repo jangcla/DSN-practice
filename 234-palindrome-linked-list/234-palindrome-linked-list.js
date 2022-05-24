@@ -17,8 +17,7 @@ var isPalindrome = function(head) {
         values.push(current.val);
         current = current.next;
     }
-    
-    
+       
     let i = 0;
     let j = values.length - 1;
     
