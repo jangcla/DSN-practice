@@ -59,3 +59,53 @@
     semestersRequired(numCourses, prereqs); // -> 2
 */
 
+const semestersRequired = (numCourses, prereqs) => {
+    const graph = graphMaker(prereqs, numCourses);
+    const taken = {};
+
+    for (let takenClass in graph) {
+        if (graph[takenClass].length === 0) taken[takenClass] = 1;
+    }
+
+    for (let takenClass in graph) {
+        dfs(graph, takenClass, taken);
+    }
+
+    return Math.max(...Object.values(taken))
+};
+
+const dfs = (graph, takenClass, taken) => {
+    if (taken[takenClass]) return taken[takenClass];
+
+    let maxSemester = 0;
+
+    for (let neighbor of graph[takenClass]) {
+        let semester = dfs(graph, neighbor, taken);
+
+        if (semester > maxSemester) maxSemester = semester;
+    }
+    taken[takenClass] = maxSemester + 1;
+
+    return taken[takenClass];
+};
+
+const graphMaker = (prereqs, numCourses) => {
+    const graph = {};
+
+    for (let i = 0; i < numCourses; i++) {
+        graph[i] = [];
+    }
+
+    for (let prereq of prereqs) {
+        const [a, b] = prereq;
+
+        graph[a].push(b);
+    }
+
+    return graph;
+}
+
+
+
+
+
