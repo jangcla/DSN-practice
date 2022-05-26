@@ -3,13 +3,14 @@
  * @return {boolean}
  */
 var isPalindrome = function(s) {
+    s = s.toLowerCase();
     const alphabet = new Set('abcdefghijklmnopqrstuvwxyz1234567890'.split(""));
     let i = 0;
     let j = s.length - 1;
     
     while (i < j) {
-        let front = s[i].toLowerCase();
-        let back = s[j].toLowerCase();
+        let front = s[i];
+        let back = s[j];
         
         if (!alphabet.has(front)) {
             i++;
