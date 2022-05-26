@@ -16,14 +16,13 @@
  //  if a child pointer is found, traverse through the child linked list first
 //   store the original next pointer to not lose the data
 var flatten = function(head) {
-    if (!head) return null;
-    
+    if (!head) return null;  
     let current = head;
     const temporary = [];
     
     while (current !== null) {
         if(current.child !== null) {
-            if(current.next)temporary.push(current.next);
+            if(current.next) temporary.push(current.next);
             current.next = current.child;
             current.child.prev = current;
         }
