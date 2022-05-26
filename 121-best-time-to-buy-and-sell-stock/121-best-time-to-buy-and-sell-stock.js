@@ -9,10 +9,8 @@ const maxProfit = (prices) => {
     for (let price of prices) {
         if (price < lowest) lowest = price;
         
-        if (price > lowest) {
-            let value = price - lowest;     
-            profit = Math.max(profit, value);
-        }
+        let value = price - lowest;     
+        profit = Math.max(profit, value);
     }
     
     return profit;
