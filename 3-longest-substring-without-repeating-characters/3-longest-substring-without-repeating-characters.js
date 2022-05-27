@@ -17,7 +17,8 @@ const lengthOfLongestSubstring = (s) => {
             charCheck = {length: 0};
         }
         
-        if (charCheck.length > longest) longest = charCheck.length;
+        // if (charCheck.length > longest) longest = charCheck.length;
+        longest = Math.max(longest, charCheck.length);
     } 
 
     return longest;
