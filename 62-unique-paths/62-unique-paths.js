@@ -9,6 +9,7 @@ var uniquePaths = function(m, n, memo = {}) {
     
     const pos = m + ',' + n;
     if (pos in memo) return memo[pos];
+    
     memo[pos] = uniquePaths(m - 1, n, memo) + uniquePaths(m, n - 1, memo);
    
     return memo[pos];
