@@ -31,8 +31,6 @@ UndergroundSystem.prototype.checkOut = function(id, stationName, t) {
     
     const distance = t - oldTime;
     
-    // [oldStation, oldTime] = checkInData;
-    
     if (this.train[`${oldStation} ${stationName}`] === undefined) {
         this.train[`${oldStation} ${stationName}`] = [distance];
     } else {
