@@ -15,7 +15,6 @@ var flatten = function(root) {
     let node = new TreeNode(null);
     
     const stack = [root];
-    
     while (stack.length > 0) {
         const current = stack.pop();
         
