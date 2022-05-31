@@ -27,5 +27,4 @@ var flatten = function(root) {
         
         node = node.right;
     };
-
 };
