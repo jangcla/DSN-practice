@@ -26,8 +26,7 @@ UndergroundSystem.prototype.checkIn = function(id, stationName, t) {
  */
 UndergroundSystem.prototype.checkOut = function(id, stationName, t) {
     const checkInData = this.startStation[id];
-    const oldStation = checkInData[0];
-    const oldTime = checkInData[1];
+    const [oldStation, oldTime] = checkInData;
     
     const distance = t - oldTime;
     
