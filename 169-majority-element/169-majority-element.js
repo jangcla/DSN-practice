@@ -10,6 +10,7 @@ var majorityElement = function(nums) {
     }
     
     let majority = nums[0];
+    
     for (let num in counter) {
         if (counter[num] > counter[majority]) majority = num;
     }
