@@ -5,6 +5,7 @@
  */
 var canConstruct = function(ransomNote, magazine) {
     const letterCount = {};
+    
     for (let i = 0; i < magazine.length; i++) {
         let char = magazine[i];
         
