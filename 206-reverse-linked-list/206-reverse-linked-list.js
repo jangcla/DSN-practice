@@ -9,7 +9,7 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var reverseList = function(head) {
+var reverseList = function(head) {  
     let temp = null;  
     let current = head;
     
