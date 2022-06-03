@@ -8,6 +8,7 @@ var arrangeCoins = function(n) {
     
     while (n - amount >= 0) {
         n -= amount;
+        
         amount++;
         count++;
     }
