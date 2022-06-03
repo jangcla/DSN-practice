@@ -4,6 +4,7 @@
  */
 var majorityElement = function(nums) {
     const counter = {};
+    
     for (let num of nums) {
         if (num in counter) counter[num]++;
         else counter[num] = 1;
