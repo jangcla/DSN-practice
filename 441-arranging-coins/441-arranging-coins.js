@@ -4,11 +4,11 @@
  */
 var arrangeCoins = function(n) {
     let count = 0;
+    let amount = 1;
     
-    let start = 1;
-    while (n - start >= 0) {
-        n -= start;
-        start++;
+    while (n - amount >= 0) {
+        n -= amount;
+        amount++;
         count++;
     }
     
