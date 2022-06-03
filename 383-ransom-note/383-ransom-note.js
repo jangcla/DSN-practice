@@ -27,8 +27,7 @@ var canConstruct = function(ransomNote, magazine) {
     }
     
     for (let char in letterCount) {
-        let value = letterCount[char];
-        
+        let value = letterCount[char];     
         if (value < 0) return false;
     }
     
