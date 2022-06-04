@@ -9,6 +9,7 @@ var floodFill = function(image, sr, sc, newColor, original = image[sr][sc]) {
     const rowInbound = sr >= 0 && sr < image.length;
     const colInbound = sc >= 0 && sc < image[0].length;
     if (!rowInbound || !colInbound) return image;
+    
     if (image[sr][sc] === newColor) return image;
     if (image[sr][sc] !== original) return image;
     
