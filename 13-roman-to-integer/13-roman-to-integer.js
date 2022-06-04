@@ -9,27 +9,26 @@ var romanToInt = function(s) {
     
     let num = 0;
     for (let i = 0; i < s.length; i++) {
+        let negative = false;
+        
         const current = s[i];
         const next = s[i + 1];
         
         if (current === "I") {
             if (next === "V" || next === "X"){
-                num -= roman[current];
-                continue;
+                negative = true;
             } 
         } else if (current === "X") {
             if (next === "L" || next === "C") {
-                num -= roman[current];
-                continue;
+                negative = true;
             }
         } else if (current === "C") {
             if (next === "D" || next === "M"){
-                num -= roman[current];
-                continue;
+                negative = true;
             } 
         }
           
-        num += roman[current];
+        num += negative ? -roman[current] : roman[current];
     }
     
     return num;
