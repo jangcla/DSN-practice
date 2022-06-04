@@ -8,7 +8,6 @@ var romanToInt = function(s) {
     };
     
     let num = 0;
-    
     for (let i = 0; i < s.length; i++) {
         let negative = false;
         
