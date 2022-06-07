@@ -2,7 +2,8 @@
  * @param {number} n
  * @return {number}
  */
-var integerReplacement = function(n) {
+var integerReplacement = function(n, memo = {}) {
+    if (n in memo) return memo[n];
     if (n === 1) return 0;
     
     let count = 0;
@@ -15,5 +16,6 @@ var integerReplacement = function(n) {
         count += Math.min(up, down);
     }
     
-    return count + 1;
+    memo[n] = count + 1;
+    return memo[n];
 };
