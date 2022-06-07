@@ -8,10 +8,10 @@ var integerReplacement = function(n, memo = {}) {
     
     let count = 0;
     if (n % 2 === 0) {
-        count += integerReplacement(n / 2);
+        count += integerReplacement(n / 2, memo);
     } else {
-        const up = integerReplacement(n + 1);
-        const down = integerReplacement(n - 1);
+        const up = integerReplacement(n + 1, memo);
+        const down = integerReplacement(n - 1, memo);
         
         count += Math.min(up, down);
     }
