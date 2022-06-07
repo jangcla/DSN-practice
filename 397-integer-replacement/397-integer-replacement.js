@@ -10,10 +10,7 @@ var integerReplacement = function(n, memo = {}) {
     if (n % 2 === 0) {
         count += integerReplacement(n / 2, memo);
     } else {
-        const up = integerReplacement(n + 1, memo);
-        const down = integerReplacement(n - 1, memo);
-        
-        count += Math.min(up, down);
+        count += Math.min(integerReplacement(n + 1, memo), integerReplacement(n - 1, memo));
     }
     
     memo[n] = count + 1;
