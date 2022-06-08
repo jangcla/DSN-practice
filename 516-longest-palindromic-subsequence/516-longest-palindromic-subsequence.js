@@ -7,6 +7,7 @@ var longestPalindromeSubseq = function(s, i = 0, j = s.length, memo = {}) {
     if (key in memo) return memo[key];
     
     if (i === j) return 1;
+    
     if (i > j) return 0;
     
     if (s[i] === s[j]) {
