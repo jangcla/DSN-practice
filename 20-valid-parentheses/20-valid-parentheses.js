@@ -2,42 +2,27 @@
  * @param {string} s
  * @return {boolean}
  */
-var isValid = function(s) {
-    if (!s.length) return true;
-    const stack = [];
+var isValid = function(str) {
+  const stack = [];
+  const brackets = {
+    '(': ')',
+    '[': ']',
+    '{': '}'
+  }
     
-    for (let i = 0; i < s.length; i++) {
-        let current = s[i];
-        let last = stack[stack.length - 1];
-        
-        switch (last) {
-            case ')' || "}" || "]":
-                return false;
-                
-            case '(':
-                if (current === ')') stack.pop();
-            
-                if (current !== ')') stack.push(current);
-                break;
-                
-            case '{':
-                if (current === '}') stack.pop();
-
-                if (current !== '}') stack.push(current);  
-                break;
-                
-            case '[':
-                if (current === ']') stack.pop();
-
-                if (current !== ']') stack.push(current);
-                break;
-                
-            default:
-                stack.push(current);
-        };    
+  for (let char of str) {
+    if (char in brackets) {
+      stack.push(brackets[char]);
+    } else {
+      if (stack.length > 0 && stack[stack.length - 1] === char) {
+        stack.pop(); 
+      } else {
+        return false;
+      }
     }
-    
-    return !stack.length;
+  }
+  
+  return stack.length === 0;
 };
 //First Attempt
 /* var isValid = function(s) {
