@@ -11,10 +11,7 @@ var twoSum = function(numbers, target) {
         const result = numbers[i] + numbers[j];
         if (result === target) return [i + 1, j + 1];
         
-        if (result < target) {
-            i++;
-        } else {
-            j--;
-        }
+        if (result < target) i++;
+        else j--;
     }
 };
