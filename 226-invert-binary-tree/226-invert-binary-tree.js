@@ -10,20 +10,34 @@
  * @param {TreeNode} root
  * @return {TreeNode}
  */
-var invertTree = function(root) {
-    if (!root) return null;
-    const stack = [root];
+// Recursive approach
+const invertTree = (root) => {
+    if (root === null) return null;
     
-    while (stack.length > 0) {
-        const current = stack.pop();
-        
-        if (current.right) stack.push(current.right);
-        if (current.left) stack.push(current.left);
-
-        const temp = current.right;
-        current.right = current.left;
-        current.left = temp;
-    }
+    const right = invertTree(root.right);
+    const left = invertTree(root.left);
+    
+    root.right = left;
+    root.left = right;
     
     return root;
-};
+}
+
+// Itterative approach
+// var invertTree = function(root) {
+//     if (!root) return null;
+//     const stack = [root];
+    
+//     while (stack.length > 0) {
+//         const current = stack.pop();
+        
+//         if (current.right) stack.push(current.right);
+//         if (current.left) stack.push(current.left);
+
+//         const temp = current.right;
+//         current.right = current.left;
+//         current.left = temp;
+//     }
+    
+//     return root;
+// };
