@@ -6,13 +6,13 @@ var isHappy = function(n) {
     const seen = new Set();
     
     while (n !== 1) {
+        n = helper(n);
+        
         if (seen.has(n)) return false;
         seen.add(n);
-        
-        n = helper(n);
     }
     
-    return n;
+    return true;
 };
 
 const helper = (n) => {
