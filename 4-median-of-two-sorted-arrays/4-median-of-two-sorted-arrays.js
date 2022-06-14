@@ -4,13 +4,13 @@
  * @return {number}
  */
 var findMedianSortedArrays = function(nums1, nums2) {
-    let joined = [];
+    const joined = [];
     
     let i = 0;
     let j = 0;
     while (i < nums1.length && j < nums2.length) {
-        let num1 = nums1[i];
-        let num2 = nums2[j];
+        const num1 = nums1[i];
+        const num2 = nums2[j];
         
         if (num1 < num2) {
             joined.push(num1);
@@ -23,14 +23,8 @@ var findMedianSortedArrays = function(nums1, nums2) {
     joined.push(...nums1.slice(i));
     joined.push(...nums2.slice(j));
     
-    let length = joined.length;
-    if (length % 2 === 0) {
-        let i = length / 2;
-        
-        return (joined[i] + joined[i - 1]) / 2;
-    }
+    let mid = Math.floor(joined.length / 2);
+    if (joined.length % 2 === 0) return (joined[mid] + joined[mid - 1]) / 2;
     
-    length = Math.floor(length / 2);
-    
-    return joined[length]
+    return joined[mid];
 };
