@@ -11,5 +11,4 @@ var singleNumber = function(nums) {
         
         if (before !== nums[i] && next !== nums[i]) return nums[i];
     }
-    
 };
