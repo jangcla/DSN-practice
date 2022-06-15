@@ -10,10 +10,10 @@ var reverse = function(x) {
     while (number[number.length - 1] === 0) {
         number.pop();
     }
-    
     number = Number(number.reverse().join(''));
     
     if (number > Math.pow(2, 31)) return 0;
     if (x < 0) return number * -1;
+    
     return number;
 };
