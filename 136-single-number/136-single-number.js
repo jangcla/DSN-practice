@@ -6,6 +6,8 @@ var singleNumber = function(nums) {
     nums = nums.sort((a, b) => a - b);
     
     for (let i = 0; i < nums.length; i++) {
-        if (nums[i - 1] !== nums[i] && nums[i + 1] !== nums[i]) return nums[i];
+        const before = nums[i - 1];
+        const next = nums[i + 1];
+        if (before !== nums[i] && next !== nums[i]) return nums[i];
     }
 };
