@@ -11,6 +11,7 @@ var titleToNumber = function(columnTitle) {
     for (let char of columnTitle) {
         let colNum = alpha[char];
         count += Math.pow(26, pow) * colNum;
+        
         pow--;
     }
     
