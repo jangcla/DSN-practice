@@ -10,7 +10,6 @@ var titleToNumber = function(columnTitle) {
     let pow = columnTitle.length - 1;
     for (let char of columnTitle) {
         let colNum = alpha[char];
-        
         count += Math.pow(26, pow) * colNum;
         pow--;
     }
