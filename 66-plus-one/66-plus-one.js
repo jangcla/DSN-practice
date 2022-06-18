@@ -7,7 +7,6 @@ var plusOne = function(digits) {
     
     for (let i = digits.length - 1; i >= 0; i--) {
         let num = digits[i];
-        
         if (num + carry > 9) {
             digits[i] = 0;
             carry = 1;
