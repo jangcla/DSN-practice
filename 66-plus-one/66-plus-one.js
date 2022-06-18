@@ -3,8 +3,7 @@
  * @return {number[]}
  */
 var plusOne = function(digits) {
-    let carry = 1;
-    
+    let carry = 1;  
     for (let i = digits.length - 1; i >= 0; i--) {
         let num = digits[i];
         
@@ -16,7 +15,7 @@ var plusOne = function(digits) {
             carry = 0;
         }
     }
-    if (carry === 1) digits.unshift(1);
     
+    if (carry === 1) digits.unshift(1);
     return digits;
 };
