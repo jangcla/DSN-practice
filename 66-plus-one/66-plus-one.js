@@ -16,7 +16,6 @@ var plusOne = function(digits) {
             carry = 0;
         }
     }
-    
     if (carry === 1) digits.unshift(1);
     
     return digits;
