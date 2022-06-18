@@ -21,8 +21,8 @@ var removeNthFromEnd = function(head, n) {
         current = current.next;
         num++;
     }
+    
     const key = num - n;
-    console.log(key)
     if (key === 1) {
         head = head.next;
     } else {
