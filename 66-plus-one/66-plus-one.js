@@ -4,6 +4,7 @@
  */
 var plusOne = function(digits) {
     let carry = 1;  
+    
     for (let i = digits.length - 1; i >= 0; i--) {
         let num = digits[i];
         
