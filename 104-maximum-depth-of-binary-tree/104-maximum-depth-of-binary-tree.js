@@ -15,7 +15,6 @@ var maxDepth = function(root) {
     
     const stack = [[root, 1]];
     let depth = 0;
-    
     while (stack.length > 0) {
         const [node, level] = stack.pop();
         depth = Math.max(level, depth);
