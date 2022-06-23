@@ -36,6 +36,6 @@ const helper = (root, vals) => {
     if (!root) return;
     vals.push(root.val);
     
-    helper(root.left, vals);
-    helper(root.right, vals);
+    if (root.left) helper(root.left, vals);
+    if (root.right) helper(root.right, vals);
 }
