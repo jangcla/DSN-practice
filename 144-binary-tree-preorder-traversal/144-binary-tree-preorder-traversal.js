@@ -28,8 +28,7 @@
 
 const preorderTraversal = (root) => {
     const vals = [];
-    helper(root, vals);
-    
+    helper(root, vals);  
     return vals;
 }
 
