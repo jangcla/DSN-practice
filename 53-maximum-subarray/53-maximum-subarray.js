@@ -28,8 +28,8 @@ const maxSubArray = (nums) => {
     
     for (let num of nums) {
         sum += num;
-        
         maxSum = Math.max(sum, maxSum);        
+        
         if (sum < 0) sum = 0;
     }
     
