@@ -9,9 +9,6 @@ var searchInsert = function(nums, target) {
     let half = Math.floor(nums.length / 2);
     if (nums[half] === target) return half;
     
-    if (nums[half] > target) {
-        return searchInsert(nums.slice(0, half), target);
-    } else {
-        return 1 + half + searchInsert(nums.slice(half + 1), target);
-    }
+    if (nums[half] > target) return searchInsert(nums.slice(0, half), target)
+    else return 1 + half + searchInsert(nums.slice(half + 1), target);
 };
